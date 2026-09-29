@@ -53,9 +53,9 @@ document.querySelectorAll('.artist-card').forEach(card=>{const v=card.querySelec
 <script>
 (function(){
  const canvas=document.getElementById('shirt360'); if(!canvas) return;
- const ctx=canvas.getContext('2d'); const img=new Image(); img.src='product-360.jpg';
+ const ctx=canvas.getContext('2d'); const img=new Image(); img.src='product-360.png';
  const frames=[
-   {x:0,w:255},{x:200,w:210},{x:400,w:170},{x:575,w:270},{x:850,w:175},{x:1030,w:170}
+   {x:0,w:395},{x:395,w:300},{x:695,w:220},{x:915,w:360},{x:1275,w:235},{x:1510,w:264}
  ];
  let frame=0,drag=false,lastX=0,acc=0;
  function draw(){
@@ -63,7 +63,7 @@ document.querySelectorAll('.artist-card').forEach(card=>{const v=card.querySelec
    const dpr=window.devicePixelRatio||1, rect=canvas.getBoundingClientRect();
    canvas.width=rect.width*dpr; canvas.height=rect.height*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
    ctx.clearRect(0,0,rect.width,rect.height);
-   const f=frames[frame], sy=0, sh=336;
+   const f=frames[frame], sy=0, sh=887;
    const pad=22, maxW=rect.width-pad*2, maxH=rect.height-pad*2;
    const scale=Math.min(maxW/f.w,maxH/sh);
    const dw=f.w*scale, dh=sh*scale;
