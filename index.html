@@ -37,7 +37,9 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
 </nav>
 <main id="homePage">
 <section class="hero">
-  <video class="hero-bg" autoplay muted loop playsinline preload="auto"><source src="home-hero.mp4" type="video/mp4"></video>
+  <video id="homeHeroVideo" class="hero-bg" autoplay muted loop playsinline webkit-playsinline preload="auto">
+    <source src="home-hero.mp4" type="video/mp4">
+  </video>
   <div class="hero-content"><div class="eyebrow">ALGC The Label</div><h1>ALL LYRICS<br><span class="gold">GLORIFY CHRIST</span></h1><div class="hero-sub">Faith. Family. Purpose. Music.</div></div>
 </section>
 <section class="section" id="artists">
@@ -104,8 +106,26 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
 </script>
 <script>
 const home=document.getElementById('homePage'),artist=document.getElementById('artistPage');
-function showArtist(){home.style.display='none';artist.style.display='block';window.scrollTo(0,0);document.querySelectorAll('#artistPage video').forEach(v=>{v.play().catch(()=>{})})}
-function showHome(){artist.style.display='none';home.style.display='block'}
+function forcePlay(v){
+  if(!v)return;
+  v.muted=true;
+  v.defaultMuted=true;
+  v.setAttribute('muted','');
+  v.setAttribute('autoplay','');
+  v.setAttribute('loop','');
+  v.setAttribute('playsinline','');
+  v.play().catch(()=>{});
+}
+const homeHeroVideo=document.getElementById('homeHeroVideo');
+if(homeHeroVideo){
+  forcePlay(homeHeroVideo);
+  homeHeroVideo.addEventListener('loadeddata',()=>forcePlay(homeHeroVideo));
+  homeHeroVideo.addEventListener('canplay',()=>forcePlay(homeHeroVideo));
+  homeHeroVideo.addEventListener('ended',()=>{homeHeroVideo.currentTime=0;forcePlay(homeHeroVideo)});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)forcePlay(homeHeroVideo)});
+}
+function showArtist(){home.style.display='none';artist.style.display='block';window.scrollTo(0,0);document.querySelectorAll('#artistPage video').forEach(forcePlay)}
+function showHome(){artist.style.display='none';home.style.display='block';forcePlay(homeHeroVideo)}
 document.querySelectorAll('.artist-card').forEach(card=>{const v=card.querySelector('video');card.addEventListener('mouseenter',()=>v.play().catch(()=>{}));card.addEventListener('mouseleave',()=>{v.pause();v.currentTime=0})});
 </script>
 </body>
