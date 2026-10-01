@@ -32,7 +32,7 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
 .artist-hero-image>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
 .artist-hero-image:after{z-index:1}
 .artist-hero-image .artist-content{z-index:2}
-#btheonePage{display:none;min-height:100vh;padding-top:74px}
+#btheonePage,#dtruthPage{display:none;min-height:100vh;padding-top:74px}
 .btheone-bio{max-width:820px;font-size:17px}
 </style>
 </head>
@@ -57,6 +57,8 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
   <div class="section-head"><div class="eyebrow">Our Artists</div><h2>Meet the<br>Kingdom.</h2><p>Hover over an artist to preview their video. Click their card to enter their full artist page.</p></div>
   <div class="artist-grid">
 <article class="artist-card" onclick="showArtist()"><img src="danele.jpg" alt="DANELE artist portrait"><video muted loop playsinline preload="metadata"><source src="C0002(2).mp4" type="video/mp4"></video><div class="artist-info"><span>ALGC The Label</span><h3>DANELE.</h3><small>Hover to preview · Click to enter</small></div></article>
+<article class="artist-card static-artist-card" onclick="showDTruth()">
+<img src="dattruthh.jpg" alt="D.A.T.R.U.T.H.H performing"><div class="artist-info"><span>ALGC The Label</span><h3>D.A.T.R.U.T.H.H.</h3><small>Click to enter</small></div></article>
 <article class="artist-card static-artist-card" onclick="showBTheOne()"><img src="btheone.jpg" alt="BTheOne performing live"><div class="artist-info"><span>ALGC The Label</span><h3>BTheOne.</h3><small>Click to enter</small></div></article>
 </div>
 </section>
@@ -175,7 +177,25 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
 </div></section>
 <section class="artist-section"><div class="eyebrow">Connect</div><h2>Follow BTheOne.</h2><a class="btn" href="https://www.instagram.com/borntobtheone/" target="_blank" rel="noopener noreferrer">Instagram @borntobtheone</a><a class="btn" href="https://www.tiktok.com/@born2btheone" target="_blank" rel="noopener noreferrer">TikTok @born2btheone</a></section>
 </main>
-<footer>© 2026 ALGC The Label · All Lyrics Glorify Christ</footer>
+<main id="dtruthPage">
+<a class="back" href="#" onclick="showHome();return false">← Back to Artists</a>
+<section class="artist-hero artist-hero-image">
+  <img src="dattruthh.jpg" alt="D.A.T.R.U.T.H.H performing live">
+  <div class="artist-content"><div class="eyebrow">ALGC The Label Artist</div><h1>D.A.T.R.U.T.H.H<span class="gold">.</span></h1><div class="hero-sub">Faith. Purpose. <b>Worship through music.</b></div></div>
+</section>
+<section class="artist-section"><div class="eyebrow">Artist Story</div><h2>His story.<br>His worship.</h2>
+<p class="bio">Raised in Lancaster, South Carolina, D.A.T.R.U.T.H.H grew up playing sports, singing in the youth choir, and attending church with his single mother. He dedicated his life to Christ at 15, but later realized God was calling him to take his faith more seriously and use his gift with purpose.<br><br>He began gospel rapping in 2016, believing that music carries the power to impact people through the words we speak. For D.A.T.R.U.T.H.H, rap is a form of worship. He listens to the beat, asks God for the lyrics, and creates from the gift God gave him.<br><br>His song <b>Give Him Praise</b> came from a real-life season of hardship involving his family. Through faith, the situation was resolved and his children returned home. The song became his testimony of praising God through both the good and the difficult seasons.</p>
+</section>
+<section class="artist-section">
+<div class="eyebrow">Music</div><h2>Listen to D.A.T.R.U.T.H.H.</h2><p class="stream-note">Tap Spotify or Apple Music to listen.</p>
+<div class="danele-track-list">
+<article class="danele-track"><div class="danele-track-art placeholder">Give Him Praise</div><div class="track-copy"><h3>Give Him Praise</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://open.spotify.com/track/4AQ8x7pynPUrfOvgfHpSda" target="_blank" rel="noopener noreferrer" aria-label="Give Him Praise on Spotify" title="Spotify">Spotify</a><a class="platform" href="https://music.apple.com/us/album/give-him-praise/1803448853?i=1803448854" target="_blank" rel="noopener noreferrer" aria-label="Give Him Praise on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">On My Soul</div><div class="track-copy"><h3>On My Soul</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/on-my-soul/1798744933?i=1798744934" target="_blank" rel="noopener noreferrer" aria-label="On My Soul on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">Spirit Walking</div><div class="track-copy"><h3>Spirit Walking</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/spirit-walking/1844363776?i=1844363777" target="_blank" rel="noopener noreferrer" aria-label="Spirit Walking on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">Covenant</div><div class="track-copy"><h3>Covenant</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/covenant/1882683457?i=1882683458" target="_blank" rel="noopener noreferrer" aria-label="Covenant on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">God's Hands</div><div class="track-copy"><h3>God's Hands</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/gods-hands/1820305705?i=1820305706" target="_blank" rel="noopener noreferrer" aria-label="God's Hands on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">Dawg Out</div><div class="track-copy"><h3>Dawg Out</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://open.spotify.com/track/5k1I30PUwvQNsf7UAiZ50a" target="_blank" rel="noopener noreferrer" aria-label="Dawg Out on Spotify" title="Spotify">Spotify</a><a class="platform" href="https://music.apple.com/us/album/dawg-out/1818939173?i=1818939174" target="_blank" rel="noopener noreferrer" aria-label="Dawg Out on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">Everything</div><div class="track-copy"><h3>Everything</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/everything/1886463078?i=1886463079" target="_blank" rel="noopener noreferrer" aria-label="Everything on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">My Baby</div><div class="track-copy"><h3>My Baby</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/my-baby/1796560474?i=1796560476" target="_blank" rel="noopener noreferrer" aria-label="My Baby on Apple Music" title="Apple Music"></a></div></article><article class="danele-track"><div class="danele-track-art placeholder">Speak to My Heart</div><div class="track-copy"><h3>Speak to My Heart</h3><span>ALGC The Label</span></div><div class="track-platforms"><a class="platform" href="https://music.apple.com/us/album/speak-to-my-heart/1844254016?i=1844254017" target="_blank" rel="noopener noreferrer" aria-label="Speak to My Heart on Apple Music" title="Apple Music"></a></div></article>
+</div></section>
+<section class="artist-section"><div class="eyebrow">Videos</div><h2>Watch D.A.T.R.U.T.H.H.</h2><div class="video-grid">
+<a class="card video-card" href="https://youtu.be/pKAPPJY3Ae8" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/pKAPPJY3Ae8/hqdefault.jpg" alt="D.A.T.R.U.T.H.H YouTube video"></div><div class="video-label"><b>D.A.T.R.U.T.H.H — Video</b><small>YouTube ↗</small></div></a><a class="card video-card" href="https://youtu.be/VYbgbTlj4ms" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/VYbgbTlj4ms/hqdefault.jpg" alt="D.A.T.R.U.T.H.H YouTube video"></div><div class="video-label"><b>D.A.T.R.U.T.H.H — Video</b><small>YouTube ↗</small></div></a><a class="card video-card" href="https://youtu.be/aQ3tRbDV0L8" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/aQ3tRbDV0L8/hqdefault.jpg" alt="D.A.T.R.U.T.H.H YouTube video"></div><div class="video-label"><b>D.A.T.R.U.T.H.H — Video</b><small>YouTube ↗</small></div></a><a class="card video-card" href="https://youtu.be/h1gd5i0VspM" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/h1gd5i0VspM/hqdefault.jpg" alt="D.A.T.R.U.T.H.H YouTube video"></div><div class="video-label"><b>Dawg Out — Big Nell x D.A.T.R.U.T.H.H</b><small>YouTube ↗</small></div></a><a class="card video-card" href="https://youtu.be/bcZ7ER_ICKk" target="_blank" rel="noopener noreferrer"><div class="thumb"><img src="https://i.ytimg.com/vi/bcZ7ER_ICKk/hqdefault.jpg" alt="D.A.T.R.U.T.H.H YouTube video"></div><div class="video-label"><b>Give Him Praise</b><small>YouTube ↗</small></div></a>
+</div></section>
+<section class="artist-section"><div class="eyebrow">Connect</div><h2>Follow D.A.T.R.U.T.H.H.</h2><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></section>
+</main><footer>© 2026 ALGC The Label · All Lyrics Glorify Christ</footer>
 <script>
 (function(){
  const canvas=document.getElementById('shirt360'); if(!canvas) return;
@@ -189,7 +209,7 @@ footer{border-top:1px solid #222;padding:35px 7%;color:#777;font-size:12px}
 })();
 </script>
 <script>
-const home=document.getElementById('homePage'),artist=document.getElementById('artistPage'),btheone=document.getElementById('btheonePage');
+const home=document.getElementById('homePage'),artist=document.getElementById('artistPage'),btheone=document.getElementById('btheonePage'),dtruth=document.getElementById('dtruthPage');
 function forcePlay(v){
   if(!v)return;
   v.muted=true;
@@ -220,19 +240,25 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden)background
 function showArtist(){
   home.style.display='none';
   btheone.style.display='none';
+  dtruth.style.display='none';
   artist.style.display='block';
   window.scrollTo(0,0);
   document.querySelectorAll('#artistPage video').forEach(forcePlay);
 }
+function showDTruth(){
+  home.style.display='none'; artist.style.display='none'; btheone.style.display='none'; dtruth.style.display='block'; window.scrollTo(0,0);
+}
 function showBTheOne(){
   home.style.display='none';
   artist.style.display='none';
+  dtruth.style.display='none';
   btheone.style.display='block';
   window.scrollTo(0,0);
 }
 function showHome(){
   artist.style.display='none';
   btheone.style.display='none';
+  dtruth.style.display='none';
   home.style.display='block';
   backgroundVideos.forEach(forcePlay);
 }
